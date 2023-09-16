@@ -1,8 +1,8 @@
-import { mrPotatoHeadQuotes } from "./quotes/mrPotatoHead";
-import mrsPotatoHeadQuotes from "./quotes/mrsPotatoHead";
-import { getIndex } from "./utilities";
+import { mrPotatoHeadQuotes } from "./quotes/mrPotatoHead.js";
+import mrsPotatoHeadQuotes from "./quotes/mrsPotatoHead.js";
+import { getIndex } from "./utilities.js";
 
-export default class Game {
+export class Game {
   start() {
     document.getElementById("hello").addEventListener("click", () => {
       const index = getIndex();
@@ -30,10 +30,10 @@ export default class Game {
       const messageContainer = document.getElementById("message");
       const wrapper = document.getElementById("wrapper");
       if (index === 1) {
-        image.src = "./assets/images/potatohead2.png";
+        image.src = "/assets/images/potatohead2.png";
         wrapper.dataset.index = "2";
       } else {
-        image.src = "./assets/images/potatohead1.png";
+        image.src = "/assets/images/potatohead1.png";
         wrapper.dataset.index = "1";
       }
       messageContainer.innerText = "";
